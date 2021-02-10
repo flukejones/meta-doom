@@ -5,15 +5,16 @@ DESCRIPTION = "The Freedoom project aims at collaboratively creating a Free IWAD
 HOMEPAGE = "http://freedoom.sourceforge.net/"
 PRIORITY = "optional"
 LICENSE = "GPL"
-LIC_FILES_CHKSUM = "file://COPYING.txt;md5=f4bc057015de5afef5e56f1cd5dfbae1"
+LIC_FILES_CHKSUM = "file://COPYING.txt;md5=038918b78710d44563f923bd8119f814"
+
 do_unpack[depends] += "unzip-native:do_populate_sysroot"
 
-PV = "0.11.3"
+PV = "0.12.1"
 
 SRC_URI = "https://github.com/freedoom/freedoom/releases/download/v${PV}/freedoom-${PV}.zip"
+SRC_URI[md5sum] = "f8c86928394b1d425ef60637b5e8ac31"
+SRC_URI[sha256sum] = "f42c6810fc89b0282de1466c2c9c7c9818031a8d556256a6db1b69f6a77b5806"
 
-
-PACKAGE_ARCH = "all"
 FILES_${PN} = "${datadir}/games/doom/*"
 FILES_${PN}-doc = "${datadir}/doc/freedoom/*"
 
@@ -24,6 +25,3 @@ do_install() {
 	install -m 0644 ${WORKDIR}/freedoom-${PV}/freedoom2.wad ${D}/${datadir}/games/doom/
 }
 
-
-SRC_URI[md5sum] = "55e9a2c7a24651d63654407d2cec26c2"
-SRC_URI[sha256sum] = "28a5eafbb1285b78937bd408fcdd8f25f915432340eee79da692eae83bce5e8a"

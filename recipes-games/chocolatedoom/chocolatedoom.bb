@@ -1,16 +1,14 @@
-DESCRIPTION = "A Doom Clone based on SDL"
+DESCRIPTION = "A Doom Clone based on SDL2"
 SECTION = "games"
-DEPENDS = "virtual/libsdl libsdl-mixer libsdl-net pkgconfig"
+DEPENDS = "virtual/libsdl2 libsdl2-mixer libsdl2-net pkgconfig"
 LICENSE = "GPL"
 LIC_FILES_CHKSUM = "file://COPYING;md5=b234ee4d69f5fce4486a80fdaf4a4263"
 
-RRECOMMENDS_${PN} = "freedoom"
-
-PV = "2.3.0"
+PV = "3.0.1"
 PR = "r0"
 SRC_URI = "https://github.com/chocolate-doom/chocolate-doom/archive/chocolate-doom-${PV}.tar.gz"
-SRC_URI[md5sum] = "42506f5672fd94d8c2019f4ce0da1c07"
-SRC_URI[sha256sum] = "aac52a0b26cd43d6723874feca4bb7c5ea9fd42a04e1be1f07b2c3557bd5a744"
+SRC_URI[md5sum] = "ca62d710d546accd2548b48f830f363d"
+SRC_URI[sha256sum] = "a54383beef6a52babc5b00d58fcf53a454f012ced7b1936ba359b13f1f10ac66"
 
 
 inherit autotools-brokensep gettext pkgconfig
